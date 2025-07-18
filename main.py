@@ -1,7 +1,20 @@
 from graph_loader import load_graph
+from dijkstra import dijkstra
 
-matrix = load_graph("./datasets/rg300_4730.txt")
+if __name__ == "__main__":
+    # Testing the hortest path from vertex 0 to 100 as requested
+    origin = 0
+    target = 100
+    file_path = "datasets/rg300_4730.txt"
 
-print("Number of vertices:", len(matrix))
-print("Weight of 0 → 1:", matrix[0][1])  # It must show 100
-print("Weight of 0 → 59:", matrix[0][59])  # It must show 17
+    try:
+        matrix = load_graph(file_path)
+    except Exception as error:
+        print("Error loading graph:", error)
+        exit()
+
+    dist, pred = dijkstra(matrix, origin)
+
+    print("origin:", origin)
+    print("Target:", target)
+    print("Cost:", dist[target])

@@ -22,7 +22,7 @@ No external libraries required
 ## Implemented Features
 
 - [x] **Graph Loader**: Reads `.txt` files and builds an adjacency matrix using `float('inf')` for missing edges
-- [ ] Dijkstra's Algorithm
+- [x] **Dijkstra's Algorithm**: Finds the shortest paths from a source vertex to all others using the adjacency matrix representation.
 - [ ] Bellman-Ford Algorithm
 - [ ] Path reconstruction
 - [ ] Performance measurement (time, cost, path)
@@ -33,3 +33,12 @@ No external libraries required
 
 The `graph_loader.py` module contains a function to import graphs from `.txt` files into an adjacency matrix.
 
+## 📈 How to use the Dijkstra algorithm
+
+The `dijkstra.py` module implements Dijkstra's algorithm to compute the shortest paths from a source vertex using an adjacency matrix.
+
+### 🔧 Usage
+
+dist, pred = dijkstra(matrix, origin)
+matrix: adjacency matrix of the graph
+origin: starting vertex index
