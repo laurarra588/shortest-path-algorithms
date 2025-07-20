@@ -42,3 +42,11 @@ The `dijkstra.py` module implements Dijkstra's algorithm to compute the shortest
 dist, pred = dijkstra(matrix, origin)
 matrix: adjacency matrix of the graph
 origin: starting vertex index
+
+## 🧮 How to use the Bellman-Ford algorithm
+
+The `bellman_ford.py` module implements the optimized Bellman-Ford algorithm to find the shortest paths from a source vertex using an adjacency matrix.
+
+### 🔧 Usage
+
+dist, pred = bellman_ford(matrix, source)
