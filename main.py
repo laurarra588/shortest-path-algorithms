@@ -1,12 +1,13 @@
 from graph_loader import load_graph
 from dijkstra import dijkstra
 from bellman_ford import bellman_ford
+from utils import reconstruct_path
 
 if __name__ == "__main__":
-    # Testing the hortest path from vertex 0 to 100 as requested
+    # Testing the shortest path from vertex 0 to 100 as requested
     origin = 0
     target = 100
-    file_path = "datasets/rg300_4730.txt"
+    file_path = "datasets/rome99c.txt"
 
     try:
         matrix = load_graph(file_path)
@@ -14,10 +15,21 @@ if __name__ == "__main__":
         print("Error loading graph:", error)
         exit()
 
-    dist, pred = dijkstra(matrix, origin)
-    dist2 , pred2 = bellman_ford(matrix,0)
+    # Dijkstra
+    dist_dijkstra, pred_dijkstra = dijkstra(matrix, origin)
+    path_dijkstra = reconstruct_path(pred_dijkstra, target)
 
-    print("origin:", origin)
-    print("Target:", target)
-    print("Cost using dijkstra:", dist[target])
-    print("Cost using Bellman_ford:", dist2[100])
+    # Bellman-Ford
+    dist_bellman, pred_bellman = bellman_ford(matrix, origin)
+    path_bellman = reconstruct_path(pred_bellman, target)
+
+    print("Source vertex:", origin)
+    print("Target vertex:", target)
+    print()
+    print("=== Dijkstra ===")
+    print("Cost:", dist_dijkstra[target])
+    print("Path:", path_dijkstra)
+    print()
+    print("=== Bellman-Ford ===")
+    print("Cost:", dist_bellman[target])
+    print("Path:", path_bellman)

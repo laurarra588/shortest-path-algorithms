@@ -21,10 +21,10 @@ No external libraries required
 
 ## Implemented Features
 
-- [x] **Graph Loader**: Reads `.txt` files and builds an adjacency matrix using `float('inf')` for missing edges
+- [x] **Graph Loader**: Reads `.txt` files and builds an adjacency matrix using `float('inf')` for missing edges.
 - [x] **Dijkstra's Algorithm**: Finds the shortest paths from a source vertex to all others using the adjacency matrix representation.
-- [ ] Bellman-Ford Algorithm
-- [ ] Path reconstruction
+- [x] **Bellman-Ford Algorithm**: Computes shortest paths from a single source and supports negative weights.
+- [x] **Path Reconstruction**: Rebuilds the shortest path from the predecessor list returned by the algorithms.
 - [ ] Performance measurement (time, cost, path)
 
 ---
@@ -50,3 +50,13 @@ The `bellman_ford.py` module implements the optimized Bellman-Ford algorithm to 
 ### 🔧 Usage
 
 dist, pred = bellman_ford(matrix, source)
+
+## 🧩 How to reconstruct the shortest path
+
+The `utils.py` module provides a helper function to rebuild the shortest path from the predecessor list returned by the algorithms.
+
+### 🔧 Usage
+
+from utils import reconstruct_path
+
+path = reconstruct_path(pred, target)
