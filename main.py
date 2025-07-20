@@ -7,7 +7,7 @@ if __name__ == "__main__":
     # Testing the shortest path from vertex 0 to 100 as requested
     origin = 0
     target = 100
-    file_path = "datasets/rome99c.txt"
+    file_path = "datasets/facebook_combined.txt"
 
     try:
         matrix = load_graph(file_path)

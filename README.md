@@ -25,7 +25,7 @@ No external libraries required
 - [x] **Dijkstra's Algorithm**: Finds the shortest paths from a source vertex to all others using the adjacency matrix representation.
 - [x] **Bellman-Ford Algorithm**: Computes shortest paths from a single source and supports negative weights.
 - [x] **Path Reconstruction**: Rebuilds the shortest path from the predecessor list returned by the algorithms.
-- [ ] Performance measurement (time, cost, path)
+- [x] **Performance measurement (time, cost, path)**: Computes execution time, cost and full path, with timeout and memory-out handling.
 
 ---
 
@@ -60,3 +60,13 @@ The `utils.py` module provides a helper function to rebuild the shortest path fr
 from utils import reconstruct_path
 
 path = reconstruct_path(pred, target)
+
+---
+
+## 📊 How to generate the report
+
+The `report.py` script automates the evaluation of the shortest path algorithms, measuring runtime, cost, and path between vertex 0 and 100.
+
+### 🔧 Usage
+
+python report.py
