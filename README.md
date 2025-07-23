@@ -11,13 +11,23 @@ shortest_path_algorithms/
 ├── dijkstra.py # Dijkstra algorithm implementation
 ├── bellman_ford.py # Bellman-Ford algorithm implementation
 ├── utils.py # Utility functions
+├── interface.py # Graphical interface for interactive visualization
 ├── datasets/ # Graph data files
+├── report.py # Performance test generator
 └── report.txt # Performance results and path outputs
 
 ## Requirements 
 
-Python 3.8+
-No external libraries required
+- Python 3.8+
+- Libraries:
+  - `tkinter`
+  - `networkx`
+  - `matplotlib`
+
+Install with:
+
+```bash
+pip install matplotlib networkx
 
 ## Implemented Features
 
@@ -28,6 +38,39 @@ No external libraries required
 - [x] **Performance measurement (time, cost, path)**: Computes execution time, cost and full path, with timeout and memory-out handling.
 
 ---
+
+🖥️ Graphical Interface
+The interface.py file launches a modern, colorful and animated UI using Tkinter.
+
+🎨 Features:
+Dark mode layout with custom fonts and colors
+
+Buttons with icons
+
+Input of origin and target vertices
+
+Result box with:
+
+⏱️ Time
+
+💰 Cost
+
+🧭 Path
+
+Animated drawing of the shortest path:
+
+Arrows and weights shown
+
+Vertices blinking during animation
+
+Only the computed path is shown (not the full graph)
+
+🔧 Usage
+bash
+Copiar
+Editar
+python interface.py
+
 
 ## 📥 How to use the Graph Loader function 
 
@@ -65,8 +108,22 @@ path = reconstruct_path(pred, target)
 
 ## 📊 How to generate the report
 
-The `report.py` script automates the evaluation of the shortest path algorithms, measuring runtime, cost, and path between vertex 0 and 100.
+The `report.py` script automates the evaluation of the shortest path algorithms, measuring runtime, cost, and path.
 
 ### 🔧 Usage
 
 python report.py
+
+🎯 How to draw the shortest path visually
+
+from utils import draw_path
+draw_path(matrix, path, blink=True)
+
+📊 How to generate the performance report
+The report.py script runs the shortest path algorithms over multiple files and vertex pairs.
+
+🔧 Usage
+python report.py
+
+👩‍🎓 Authors
+Developed by Laura Almeida Silveira - UFOP – CSI466 – 2025

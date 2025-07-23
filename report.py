@@ -8,9 +8,9 @@ def algorithms(name, func, matrix, origin, target, timeout=1000):
     try:
         start_time = time.time()
         dist, pred = func(matrix, origin)
-        elapsed = time.time() - start_time
+        time_elapsed = time.time() - start_time
 
-        if elapsed > timeout:
+        if time_elapsed > timeout:
             return f"{name}: TO"
 
         cost = dist[target]
@@ -19,7 +19,7 @@ def algorithms(name, func, matrix, origin, target, timeout=1000):
         if cost == float('inf') or not path:
             return f"{name}: no path"
 
-        return f"{name}: time={elapsed:.4f}s, cost={cost}, path={path}"
+        return f"{name}: time={time_elapsed:.4f}s, cost={cost}, path={path}"
 
     except MemoryError:
         return f"{name}: MO"
