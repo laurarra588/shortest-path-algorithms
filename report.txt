@@ -1,0 +1,76 @@
+===== FILE: datasets/facebook_combined.txt =====
+
+Source: 0, Target: 100 
+Dijkstra: time=3.0564s, cost=1.0, path=[0, 100]
+Bellman-Ford: time=10.8151s, cost=1.0, path=[0, 100]
+
+Source: 10, Target: 50 
+Dijkstra: time=3.1104s, cost=2.0, path=[10, 0, 50]
+Bellman-Ford: time=12.8158s, cost=2.0, path=[10, 277, 50]
+
+Source: 20, Target: 80 
+Dijkstra: time=2.8717s, cost=2.0, path=[20, 0, 80]
+Bellman-Ford: time=20.2836s, cost=2.0, path=[20, 0, 80]
+
+Source: 0, Target: 1 
+Dijkstra: time=2.9685s, cost=1.0, path=[0, 1]
+Bellman-Ford: time=10.5680s, cost=1.0, path=[0, 1]
+
+
+===== FILE: datasets/rg300_4730.txt =====
+
+Source: 0, Target: 100 
+Dijkstra: time=0.0168s, cost=16.0, path=[0, 15, 97, 248, 16, 122, 100]
+Bellman-Ford: time=0.0934s, cost=16.0, path=[0, 15, 97, 248, 16, 122, 100]
+
+Source: 10, Target: 50 
+Dijkstra: time=0.0161s, cost=18.0, path=[10, 172, 223, 120, 221, 42, 50]
+Bellman-Ford: time=0.0767s, cost=18.0, path=[10, 172, 223, 120, 221, 42, 50]
+
+Source: 20, Target: 80 
+Dijkstra: time=0.0170s, cost=10.0, path=[20, 103, 123, 237, 43, 194, 80]
+Bellman-Ford: time=0.0891s, cost=10.0, path=[20, 103, 123, 237, 43, 194, 80]
+
+Source: 0, Target: 1 
+Dijkstra: time=0.0437s, cost=15.0, path=[0, 15, 13, 21, 57, 1]
+Bellman-Ford: time=0.1003s, cost=15.0, path=[0, 15, 45, 144, 294, 1]
+
+
+===== FILE: datasets/rome99c.txt =====
+
+Source: 0, Target: 100 
+Dijkstra: time=2.0978s, cost=36037.0, path=[0, 21, 20, 16, 17, 18, 14, 19, 159, 158, 171, 155, 181, 138, 129, 128, 65, 120, 119, 123, 124, 125, 127, 126, 72, 86, 85, 79, 90, 89, 87, 97, 100]
+Bellman-Ford: time=57.8524s, cost=36037.0, path=[0, 21, 20, 16, 17, 18, 14, 19, 159, 158, 171, 155, 181, 138, 129, 128, 65, 120, 119, 123, 124, 125, 127, 126, 72, 86, 85, 79, 90, 89, 87, 97, 100]
+
+Source: 10, Target: 50 
+Dijkstra: time=1.8581s, cost=15993.0, path=[10, 150, 151, 145, 62, 51, 50]
+Bellman-Ford: time=36.9186s, cost=15993.0, path=[10, 150, 151, 145, 62, 51, 50]
+
+Source: 20, Target: 80 
+Dijkstra: time=2.1887s, cost=32413.0, path=[20, 16, 17, 18, 14, 19, 159, 158, 171, 155, 181, 138, 129, 128, 65, 120, 119, 123, 124, 125, 127, 126, 72, 69, 70, 77, 76, 80]
+Bellman-Ford: time=54.6512s, cost=32413.0, path=[20, 16, 17, 18, 14, 19, 159, 158, 171, 155, 181, 138, 129, 128, 65, 120, 119, 123, 124, 125, 127, 126, 72, 69, 70, 77, 76, 80]
+
+Source: 0, Target: 1 
+Dijkstra: time=2.3764s, cost=193.0, path=[0, 1]
+Bellman-Ford: time=58.2521s, cost=193.0, path=[0, 1]
+
+
+===== FILE: datasets/toy.txt =====
+
+Source: 0, Target: 100 
+Dijkstra: vertex out of range
+Bellman-Ford: vertex out of range
+
+Source: 10, Target: 50 
+Dijkstra: vertex out of range
+Bellman-Ford: vertex out of range
+
+Source: 20, Target: 80 
+Dijkstra: vertex out of range
+Bellman-Ford: vertex out of range
+
+Source: 0, Target: 1 
+Dijkstra: time=0.0000s, cost=4.0, path=[0, 2, 1]
+Bellman-Ford: time=0.0000s, cost=4.0, path=[0, 2, 1]
+
+

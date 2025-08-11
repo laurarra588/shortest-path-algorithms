@@ -1,4 +1,4 @@
-import time
+import time 
 from graph_loader import load_graph
 from dijkstra import dijkstra
 from bellman_ford import bellman_ford
@@ -6,6 +6,11 @@ from utils import reconstruct_path
 
 def algorithms(name, func, matrix, origin, target, timeout=1000):
     try:
+        num_vertices = len(matrix)
+        
+        if origin >= num_vertices or target >= num_vertices:
+            return f"{name}: vertex out of range"
+
         start_time = time.time()
         dist, pred = func(matrix, origin)
         time_elapsed = time.time() - start_time
@@ -37,8 +42,7 @@ vertex_pairs = [
     (0, 100),
     (10, 50),
     (20, 80),
-    (0, 1),
-    (1, 299)
+    (0, 1)
 ]
 
 with open("report.txt", "w") as f:
@@ -66,7 +70,6 @@ with open("report.txt", "w") as f:
 
             f.write(res_dijkstra + "\n")
             f.write(res_bellman + "\n")
-
             print(res_dijkstra)
             print(res_bellman)
 
